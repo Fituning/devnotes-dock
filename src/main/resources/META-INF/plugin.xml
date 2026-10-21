@@ -1,0 +1,38 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.plugin.notes</id>
+    <name>JetBrains Notes &amp; TODOs</name>
+    <vendor email="c.azancoth@gmail.com" url="https://kotheastudio.com">Kothea Studio</vendor>
+
+    <description><![CDATA[
+    <h3>Plugin de Notes &amp; Suivi TODOs pour toute la suite JetBrains</h3>
+    <p>Ce plugin offre une solution complète de prise de notes intégrée directement dans le volet de droite de votre IDE :</p>
+    <ul>
+        <li><b>Notes de Projet :</b> Vos notes isolées spécifiques à chaque projet (stockées dans .idea/notes/).</li>
+        <li><b>Notes Globales :</b> Un bloc-notes centralisé partagé entre tous vos projets (WebStorm, IntelliJ, PyCharm, etc.).</li>
+        <li><b>Agrégation des TODOs &amp; Notes liées :</b> Retrouve tous les TODOs du projet, permet d'associer des notes explicatives à chaque tâche et affiche une icône dans la marge (gutter) du code pour les repérer immédiatement.</li>
+        <li><b>Support Markdown &amp; Checklists :</b> Prise en charge du Markdown avec prévisualisation et cases à cocher interactives (- [ ] / - [x]).</li>
+        <li><b>Arborescence complète :</b> Organisez vos notes en dossiers et sous-dossiers.</li>
+    </ul>
+    ]]></description>
+
+    <!-- Dépendance sur le module commun : garantit la compatibilité avec WebStorm, IntelliJ IDEA, PyCharm, PhpStorm, etc. -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Fenêtre d'outils ancrée sur la barre latérale droite -->
+        <toolWindow id="Notes"
+                    anchor="right"
+                    factoryClass="com.plugin.notes.ui.NotesToolWindowFactory"
+                    icon="/icons/notesToolWindow.svg"/>
+
+        <!-- Indicateur dans la gouttière de l'éditeur pour les TODOs qui ont une note -->
+        <codeInsight.lineMarkerProvider language=""
+                                        implementationClass="com.plugin.notes.editor.TodoNoteLineMarkerProvider"/>
+
+        <!-- Services -->
+        <applicationService serviceImplementation="com.plugin.notes.services.GlobalNotesService"/>
+        <projectService serviceImplementation="com.plugin.notes.services.ProjectNotesService"/>
+        <projectService serviceImplementation="com.plugin.notes.services.TodoNotesService"/>
+    </extensions>
+</idea-plugin>

@@ -1,16 +1,25 @@
-# JetBrains Notes & TODOs Plugin
+# 📝 DevNotes Dock — JetBrains Plugin
 
-Plugin de prise de notes et d'organisation hiérarchique avec intégration des **TODOs**, conçu pour **WebStorm** et l'ensemble de la suite **JetBrains** (IntelliJ IDEA, PyCharm, PhpStorm, GoLand, CLion, etc.).
+<p align="center">
+  <img src="src/main/resources/META-INF/pluginIcon.svg" alt="DevNotes Dock Logo" width="80" height="80" />
+</p>
+
+<p align="center">
+  <b>Smart Markdown Notepad, Project Scratchpads & Codebase TODOs</b><br>
+  <i>Développé par <b>Kothea Studio</b> pour WebStorm, PhpStorm, PyCharm & toute la suite JetBrains</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/version-1.0.0-F5A623.svg" alt="Version 1.0.0" />
+  <img src="https://img.shields.io/badge/vendor-Kothea%20Studio-00DC82.svg" alt="Kothea Studio" />
+  <img src="https://img.shields.io/badge/compatibility-2024.1+-blue.svg" alt="Compatibility 2024.1+" />
+</p>
 
 ---
 
-## 🎯 Fonctionnalités Clés
+## 🎯 Présentation
 
-1. **Intégration Barre Latérale Droite (`ToolWindow`)** :
-   - Un volet **Notes** toujours accessible en 1 clic dans la barre droite de l'IDE.
-   - Ne gêne pas l'espace de code principal.
-
-2. **3 Vues Complètes & Dédiées** :
+**DevNotes Dock** offre une solution complète de bloc-notes Markdown et de suivi des tâches intégrée directement dans le volet droit de votre IDE :
    - **Notes Projet** :
      - Notes stockées localement dans `.idea/notes/` à la racine de votre projet.
      - Totalement isolées : chaque projet dispose de son propre espace de travail documentaire, sans polluer vos commits Git (déjà ignoré ou rangé dans `.idea`).

@@ -1,22 +1,25 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.plugin.notes</id>
-    <name>JetBrains Notes &amp; TODOs</name>
+    <name>DevNotes Dock</name>
+    <version>1.0.0</version>
     <vendor>Kothea Studio</vendor>
 
     <description><![CDATA[
-    <p>JetBrains Notes and TODOs provides an integrated markdown note-taking and task-tracking solution embedded directly in your IDE's right tool window.</p>
+    <p>DevNotes Dock provides an integrated markdown notepad, project scratchpads, and codebase TODO tracker embedded directly into your IDE's right tool window.</p>
+
+    <p>Eliminate friction from external notepad apps. Keep all your developer notes, snippets, checklists, and task breakdowns directly inside WebStorm, PhpStorm, PyCharm, and IntelliJ IDEA.</p>
 
     <h3>Key Features</h3>
     <ul>
         <li><b>Project Notes:</b> Isolated project-specific notes stored directly in your workspace (.idea/notes/).</li>
-        <li><b>Global Notes:</b> Centralized notepad shared across all your projects in WebStorm, PhpStorm, PyCharm, and IntelliJ IDEA.</li>
+        <li><b>Global Notes:</b> Centralized scratchpad shared across all your projects.</li>
         <li><b>TODOs Aggregation:</b> Automatically indexes TODO comments in your codebase, links explanatory notes to tasks, and displays gutter icons in editor margins.</li>
         <li><b>Markdown Support &amp; Checklists:</b> Full markdown rendering with interactive checkboxes (- [ ] / - [x]).</li>
         <li><b>Hierarchical Folders:</b> Organize notes with folders and subfolders.</li>
     </ul>
 
-    <p>Crafted by Kothea Studio for productive daily coding.</p>
+    <p>Crafted by Kothea Studio for seamless full-stack developer productivity.</p>
     ]]></description>
 
     <change-notes><![CDATA[
@@ -29,7 +32,7 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="Notes"
+        <toolWindow id="DevNotes"
                     anchor="right"
                     factoryClass="com.plugin.notes.ui.NotesToolWindowFactory"
                     icon="/icons/notesToolWindow.svg"/>

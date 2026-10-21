@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="noteBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2028"/>
+      <stop offset="100%" stop-color="#0E1015"/>
+    </linearGradient>
+    <linearGradient id="noteAccentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#FF5722"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background squircle -->
+  <rect x="2" y="2" width="36" height="36" rx="9" fill="url(#noteBgGrad)" stroke="#383C4A" stroke-width="1"/>
+
+  <!-- Notepad main card -->
+  <rect x="7" y="7" width="26" height="26" rx="4" fill="#14161D" stroke="url(#noteAccentGrad)" stroke-width="1.5"/>
+
+  <!-- Top coil / spiral binding indicators -->
+  <line x1="12" y1="5.5" x2="12" y2="8.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="17" y1="5.5" x2="17" y2="8.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="22" y1="5.5" x2="22" y2="8.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="27" y1="5.5" x2="27" y2="8.5" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Content line 1: Checkbox & Text -->
+  <rect x="10.5" y="12" width="4.5" height="4.5" rx="1" fill="#00DC82" opacity="0.9"/>
+  <path d="M11.5 14.2 L12.5 15.2 L14 13" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="17.5" y1="14.2" x2="28" y2="14.2" stroke="#DFE1E5" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Content line 2: Markdown header / bold line -->
+  <line x1="10.5" y1="20" x2="24" y2="20" stroke="#F5A623" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Content line 3: Regular text lines -->
+  <line x1="10.5" y1="24.5" x2="27" y2="24.5" stroke="#6C707E" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="10.5" y1="28" x2="21" y2="28" stroke="#6C707E" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
